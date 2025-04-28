@@ -53,21 +53,23 @@ def random_seed(seed, data):
 
 # 导入节点
 from .nodes.ImageNode import SaveImageAndMetadata
-
+from .nodes.Utils import MultiplicationNode
 
 # 要导出的所有节点及其名称的字典
 # 注意：名称应全局唯一
 NODE_CLASS_MAPPINGS = {
     
-    "SaveImageAndMetadata_":SaveImageAndMetadata
-    
+    "SaveImageAndMetadata_":SaveImageAndMetadata,
+    "MultiplicationNode": MultiplicationNode,
+
 }
 
 # 一个包含节点友好/可读的标题的字典
 NODE_DISPLAY_NAME_MAPPINGS = {
    
-    "SaveImageAndMetadata_":"Save Image Output ♾️MixlabApp"
-    
+    "SaveImageAndMetadata_":"Save Image Output ♾️MixlabApp",
+    "MultiplicationNode": "Math Operation ♾️Mixlab",
+
 }
 
 # web ui的节点功能
